@@ -1,0 +1,65 @@
+﻿@using eGames.Data.ViewModels
+@model ShoppingCartVM
+
+@{
+    ViewData["Title"] = "Shopping cart summary";
+}
+
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-8 col-lg-8 mx-auto">
+        <div class="text-center">
+            <h2>Your shopping cart summary</h2>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
+                {
+                    <tr>
+                        <td class="align-middle">@item.Game.Name</td>
+                        <td class="align-middle">$@item.Game.Price</td>
+                        <td class="align-middle">@item.Amount</td>
+                        <td class="align-middle">@((item.Amount * item.Game.Price).ToString("c"))</td>
+                        <td class="align-middle" style="white-space:nowrap">
+                            <a class="text-danger" style="text-decoration:none" asp-controller="Orders" asp-action="RemoveFromShoppingCart" asp-route-id="@item.Game.Id">
+                                <i class="bi bi-cart-dash"></i>
+                            </a>
+                            |
+                            <a class="text-success" style="text-decoration:none" asp-controller="Orders" asp-action="AddToShoppingCart" asp-route-id="@item.Game.Id">
+                                <i class="bi bi-cart-plus"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><b>Total:</b></td>
+                    <td>
+                        @Model.ShoppingCartTotal.ToString("c")
+                    </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="text-center">
+            <a class="btn btn-outline-primary" asp-controller="Games" asp-action="Index">
+                <i class="bi bi-plus-square-dotted"></i>
+                Add more items
+            </a>
+            <a class="btn btn-success" asp-action="RequestPayment">
+                <i class="bi bi-credit-card"></i>
+                Complete Order
+            </a>
+        </div>
+    </div>
+</div>

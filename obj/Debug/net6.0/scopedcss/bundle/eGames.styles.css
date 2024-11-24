@@ -1,0 +1,91 @@
+/* _content/eGames/Views/Shared/NotFound.cshtml.rz.scp.css */
+body[b-7v8heaqx7l] {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.error-container[b-7v8heaqx7l] {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1[b-7v8heaqx7l] {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p[b-7v8heaqx7l] {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.error-image[b-7v8heaqx7l] {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://i.imgur.com/lKJiT77.png);
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.return-home-btn[b-7v8heaqx7l] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+/* _content/eGames/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-y8cu5xmytv] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-y8cu5xmytv] {
+  color: #0077cc;
+}
+
+.btn-primary[b-y8cu5xmytv] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-y8cu5xmytv], .nav-pills .show > .nav-link[b-y8cu5xmytv] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-y8cu5xmytv] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-y8cu5xmytv] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-y8cu5xmytv] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-y8cu5xmytv] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-y8cu5xmytv] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
